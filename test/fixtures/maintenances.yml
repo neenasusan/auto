@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maintenanceTask: MyString
+  date: MyText
+  vehicle: one
+
+two:
+  maintenanceTask: MyString
+  date: MyText
+  vehicle: two

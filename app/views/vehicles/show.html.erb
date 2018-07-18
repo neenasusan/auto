@@ -1,27 +1,27 @@
-<p>
+
   <strong>Licence Number:</strong>
   <%= @vehicle.licenceNum %>
-</p>
 
-<p>
+
   <strong>Type:</strong>
   <%= @vehicle.vehicleType %>
-</p>
  
-<p>
   <strong>Model:</strong>
   <%= @vehicle.vehicleModel %>
-</p>
 
-<p>
   <strong>Model Year:</strong>
   <%= @vehicle.modelYear %>
-</p>
 
-<p>
   <strong>Odometer Reading:</strong>
   <%= @vehicle.odoReading %>
-</p>
+
+
+
+<h2>Maintenance Task</h2>
+<%= render @vehicle.maintenances %>
+ 
+<h2>Add a Maintenance Task:</h2>
+<%= render 'maintenances/form' %>
 
 
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |

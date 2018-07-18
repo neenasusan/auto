@@ -1,0 +1,15 @@
+<p>
+  <strong>Maintenance Task:</strong>
+  <%= maintenance.maintenanceTask %>
+</p>
+ 
+<p>
+  <strong>Maintenance date:</strong>
+  <%= maintenance.date %>
+</p>
+ 
+<p>
+  <%= link_to 'Destroy maintenance', [maintenance.vehicle, maintenance],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
