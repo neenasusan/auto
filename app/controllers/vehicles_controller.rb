@@ -1,26 +1,29 @@
 class VehiclesController < ApplicationController
 
- 
+ 	def index
+    	@vehicles = Vehicle.all
+  	end
+
+  	def show
+    	@vehicle = Vehicle.find(params[:id])
+  	end
 
 	def new
 
 	end	
 
-
 	def edit
   		@vehicle = Vehicle.find(params[:id])
 	end
+
+	def create
+
+		@vehicle = Vehicle.new(vehicle_params)
+  		@vehicle.save
+  		redirect_to @vehicle
+		
+	end
  
-
-	def show
-    	@vehicle = Vehicle.find(params[:id])
-  	end
-
-
-  	def index
-    	@vehicles = Vehicle.all
-  	end
-
 
 	def update
   		@vehicle = Vehicle.find(params[:id])
@@ -31,15 +34,7 @@ class VehiclesController < ApplicationController
     	render 'edit'
   		end
 	end
-
-
-	def create
-
-		@vehicle = Vehicle.new(vehicle_params)
-  		@vehicle.save
-  		redirect_to @vehicle
-		
-	end
+	
 
 	def destroy
   		@vehicle = Vehicle.find(params[:id])
