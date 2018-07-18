@@ -1,18 +1,31 @@
-<h1>Listing vehicles</h1>
+<h1>Vehicles in Automan</h1>
 
-<%= link_to 'New vehicle', new_vehicle_path %>
+<%= link_to ' Add a New vehicle', new_vehicle_path %>
  
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="3"></th>
+    <th>SerialNo</th>
+    <th>Licence Number</th>
+     <th>Type</th>
+    <th>Model</th>
+    <th>Model Year</th>
+     <th>Odometer Reading</th>
+
+   
+    
+    <th colspan="6"></th>
   </tr>
  
-  <% @vehicles.each do |vehicle| %>
+  <% @vehicles.each_with_index do |vehicle,index| %>
     <tr>
-      <td><%= vehicle.title %></td>
-      <td><%= vehicle.text %></td>
+       <td><%= index+1 %> </td>
+      <td><%= vehicle.licenceNum %></td>
+      <td><%= vehicle.vehicleType %></td>
+      <td><%= vehicle.vehicleModel %></td>
+      <td><%= vehicle.modelYear %></td>
+      <td><%= vehicle.odoReading %></td>
+     
+      
       <td><%= link_to 'Show', vehicle_path(vehicle) %></td>
       <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
       <td><%= link_to 'Destroy', vehicle_path(vehicle),

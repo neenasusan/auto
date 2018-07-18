@@ -46,7 +46,7 @@ class VehiclesController < ApplicationController
 	private
   	
   	def vehicle_params
-    	params.require(:vehicle).permit(:title, :text)
+    	params.require(:vehicle).permit(:licenceNum, :vehicleModel, :vehicleType, :modelYear, :odoReading)
     end
 
 	

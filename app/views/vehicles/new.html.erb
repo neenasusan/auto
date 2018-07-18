@@ -4,22 +4,36 @@
 </head>
 <body>
 
-	<h1> Add A vehicle to Automan<h1>
+	<h1> Add A Vehicle to Automan</h1>
 
 
 	<%= form_with scope: :vehicle,url: vehicles_path, local: true do |form| %>
 
   		<p>
-    		<%= form.label :title %><br>
-    		<%= form.text_field :title %>
+    		<%= form.label :licenceNum, 'Licence plate Number' %><br>
+    		<%= form.text_field :licenceNum %>
   		</p>
  
+      <p>
+        <%= form.label :vehicleType, 'Type of vehicle' %><br>
+        <%= form.text_area :vehicleType %>
+      </p>
 
   		<p>
-    		<%= form.label :text %><br>
-    		<%= form.text_area :text %>
+    		<%= form.label :vehicleModel, 'Model of vehicle' %><br>
+    		<%= form.text_area :vehicleModel %>
   		</p>
 
+      <p>
+       <%= form.label :modelYear, 'Model  Year of vehicle' %><br>
+       <%= form.text_area :modelYear  %>
+      </p>
+
+
+      <p>
+       <%= form.label :odoReading, 'Odometer Reading of vehicle' %><br>
+       <%= form.text_area :odoReading  %>
+      </p>
  
   		<p>
     		<%= form.submit %>

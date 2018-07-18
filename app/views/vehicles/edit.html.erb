@@ -1,16 +1,33 @@
 
-<h1>Edit vehicle</h1>
+<h1>Edit Vehicle's Information</h1>
  
 <%= form_with(model: @vehicle, local: true) do |form| %>
 <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.label :licenceNum, 'Licence plate Number' %><br>
+    <%= form.text_field :licenceNum %>
+  </p>
+
+  <p>
+    <%= form.label :vehicleType, 'Type of vehicle' %><br>
+    <%= form.text_area :vehicleType  %>
   </p>
  
   <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.label :vehicleModel, 'Model of vehicle' %><br>
+    <%= form.text_area :vehicleModel  %>
   </p>
+
+   <p>
+    <%= form.label :modelYear, 'Model  Year of vehicle' %><br>
+    <%= form.text_area :modelYear  %>
+  </p>
+
+  <p>
+    <%= form.label :odoReading, 'Odometer Reading of vehicle' %><br>
+    <%= form.text_area :odoReading  %>
+  </p>
+
+  
  
   <p>
     <%= form.submit %>
