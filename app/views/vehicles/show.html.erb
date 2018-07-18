@@ -1,11 +1,28 @@
 <p>
-  <strong>Title:</strong>
-  <%= @vehicle.title %>
+  <strong>Licence Number:</strong>
+  <%= @vehicle.licenceNum %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @vehicle.vehicleType %>
 </p>
  
 <p>
-  <strong>Text:</strong>
-  <%= @vehicle.text %>
+  <strong>Model:</strong>
+  <%= @vehicle.vehicleModel %>
 </p>
+
+<p>
+  <strong>Model Year:</strong>
+  <%= @vehicle.modelYear %>
+</p>
+
+<p>
+  <strong>Odometer Reading:</strong>
+  <%= @vehicle.odoReading %>
+</p>
+
+
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
 <%= link_to 'Back', vehicles_path %>
