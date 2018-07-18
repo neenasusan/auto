@@ -1,0 +1,14 @@
+
+<%= form_with(model: [ @vehicle, @vehicle.maintenances.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :maintenanceTask %><br>
+    <%= form.text_field :maintenanceTask %>
+  </p>
+  <p>
+    <%= form.label :date %><br>
+    <%= form.text_area :date %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

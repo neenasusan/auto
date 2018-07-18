@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_18_191739) do
+ActiveRecord::Schema.define(version: 2018_07_18_205445) do
+
+  create_table "maintenances", force: :cascade do |t|
+    t.string "maintenanceTask"
+    t.text "date"
+    t.integer "vehicle_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["vehicle_id"], name: "index_maintenances_on_vehicle_id"
+  end
 
   create_table "vehicles", force: :cascade do |t|
     t.string "licenceNum"
