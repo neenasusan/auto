@@ -3,10 +3,10 @@
 	<title>hello</title>
 </head>
 <body>
-
+<div class="container">
 	<h1> Add A Vehicle to Automan</h1>
 
-
+  
 	<%= form_with scope: :vehicle,url: vehicles_path, local: true do |form| %>
 
   		<p>
@@ -20,7 +20,7 @@
       </p>
 
   		<p>
-    		<%= form.label :vehicleModel, 'Model of vehicle' %><br>
+    		<%= form.label :vehicleModel,'Model of vehicle' %><br>
     		<%= form.text_area :vehicleModel %>
   		</p>
 
@@ -40,6 +40,7 @@
   		</p>
 
 	<% end %>
+</div>
 
 	<%= link_to 'Back', vehicles_path %>
 

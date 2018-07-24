@@ -1,3 +1,33 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.container {
+
+	padding-top: 10%;
+    padding-right: 50%;
+    padding-bottom: 10%;
+    padding-left: 50%;
+
+
+    /* The image used */
+    background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/07/Bugatti-Veyron-2013-Sports-Cars-HD-Wallpaper-2.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#automan{
+	color:balck;
+	padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px
+}
